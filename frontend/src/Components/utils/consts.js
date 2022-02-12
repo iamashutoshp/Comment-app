@@ -1,5 +1,9 @@
 export const constant= {
-    
+    user:{
+      email:"ashutosh.pandey.lk@gmail.com",
+      password:"qwerty123",
+      secret:'bond007'
+    }
 }
 export const customStyles={
     superCardStyle : {
@@ -7,6 +11,8 @@ export const customStyles={
         marginRight: "auto",
         padding: "4px",
         background: "#afb3ba",
+        marginTop: '8px',
+        marginBottom: 'auto'
       },
       header : {
         color: "#000",
