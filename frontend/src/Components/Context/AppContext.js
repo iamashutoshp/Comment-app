@@ -8,8 +8,8 @@ export default class AppProvider extends React.Component {
     super(props);
     this.state = {
       isAuthenticated: prevVal ? prevVal.isAuthenticated : false,
-      user: prevVal.user,
-      enteredPath: prevVal.enteredPath,
+      user: prevVal ? prevVal.user : {},
+      enteredPath:prevVal ? prevVal.enteredPath : '',
     };
   }
 
@@ -45,11 +45,12 @@ export default class AppProvider extends React.Component {
             );
           },
 
-          setLogOut: (flag, calllback) => {
+          setLogOut: (flag,calllback) => {
+            console.log("in context")
             this.setState(
               {
                 user: {},
-                isAuthenticated: false,
+                isAuthenticated: flag,
               },
               () => {
                 calllback(true);
@@ -92,6 +93,7 @@ export default class AppProvider extends React.Component {
 
           isAuthenticated: this.state.isAuthenticated,
           user: this.state.user,
+          enteredPath: this.state.enteredPath
         }}
       >
         {console.log("context : ", this.state)}

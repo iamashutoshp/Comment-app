@@ -13,6 +13,7 @@ export default class App extends Component {
 
   render() {
     return (
+      <AppProvider>
         <BrowserRouter>
           <Routes>
             <Route
@@ -29,6 +30,7 @@ export default class App extends Component {
             />
           </Routes>
         </BrowserRouter>
+        </AppProvider>
     );
   }
 }

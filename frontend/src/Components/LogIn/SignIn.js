@@ -17,9 +17,6 @@ import LandingPage from "../CommentPage/LandingPage";
 
 export default function SignIn(props) {
   const navigation = useNavigate();
-  // return <>
-  // <button onClick={() => navigation('HomePage')}>abc</button>
-  // </>
   return <SignInClass navigation={() => navigation("/comment")} />;
 }
 
@@ -73,13 +70,6 @@ class SignInClass extends Component {
       );
     else if (this.state.forgotPassword)
       this.handleForgotPass(data.get("email"), data.get("secret"));
-
-    console.log(this.context);
-    this.context.demo(this.context.abc, (check) => {
-      if (check) {
-        console.log("checked");
-      }
-    });
 
     setTimeout(
       () =>
